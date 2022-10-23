@@ -1,0 +1,83 @@
+﻿<ui:UiPage x:Class="TrashTextTools.Pages.Home"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+           xmlns:local="clr-namespace:TrashTextTools.Pages"
+           mc:Ignorable="d"
+           d:DesignHeight="450"
+           d:DesignWidth="800"
+           Scrollable="True"
+           Title="Home">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Border
+            Grid.Row="0"
+            Height="200"
+            CornerRadius="8,0,0,0">
+            <Border.Background>
+                <ImageBrush ImageSource="pack://application:,,,/Resources/banner.png" Stretch="UniformToFill" />
+            </Border.Background>
+            <Border CornerRadius="8,0,0,0">
+                <Border.Background>
+                    <LinearGradientBrush>
+                        <GradientStop Offset="0" Color="#66000000" />
+                        <GradientStop Offset="1" Color="#00000000" />
+                    </LinearGradientBrush>
+                </Border.Background>
+                <StackPanel
+                    Margin="16"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Center"
+                    Background="Transparent">
+                    <TextBlock
+                        FontSize="28"
+                        Text="Trash Text Tools"
+                        Foreground="{DynamicResource TextFillColorLightPrimaryBrush}" />
+                    <TextBlock
+                        FontSize="18"
+                        Opacity=".8"
+                        Text="垃圾文案工具箱"
+                        Foreground="{DynamicResource TextFillColorLightPrimaryBrush}" />
+                </StackPanel>
+            </Border>
+        </Border>
+        <Grid Grid.Row="1" Margin="14,14,14,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <ui:CardAction
+                Margin="0,0,4,0"
+                Icon="Note24">
+                <StackPanel>
+                    <TextBlock
+                        Margin="0"
+                        FontSize="13"
+                        FontWeight="Medium"
+                        Text="营销号文案" />
+                    <TextBlock
+                        FontSize="12"
+                        Foreground="{DynamicResource TextFillColorTertiaryBrush}"
+                        Text="经典营销号生成器" />
+                </StackPanel>
+            </ui:CardAction>
+        </Grid>
+        <Grid Grid.Row="2" Margin="14,14,14,0">
+            <ui:Anchor
+                Content="源代码"
+                Icon="Link48"
+                NavigateUri="https://github.com/srcatt" />
+        </Grid>
+    </Grid>
+</ui:UiPage>
